@@ -3,10 +3,10 @@
   "version": "1.0.0",
   "description": "My portfolio website",
   "main": "index.js",
-  "homepage": "https://JessFonseca.github.io/Portfolio",
+  "homepage": "https://jessfonseca.github.io/portfolio",
   "scripts": {
     "sass": "node-sass -w scss/ -o css/ --recursive",
-    "deploy": "gh-pages -d ./"
+    "deploy": "gh-pages -d main"
   },
   "author": "Jesse Fonseca",
   "license": "ISC",
