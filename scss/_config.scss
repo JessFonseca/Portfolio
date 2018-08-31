@@ -1,0 +1,54 @@
+$primary-color: #242582;
+$secondary-color: #FC4445;
+$show-home: true;
+$bg-img: url(../img/ai-close-up-code-160107.jpg);
+$bg-opacity: .9;
+
+@mixin fade {
+    transition: all .7s ease-out;
+}
+
+@mixin bg {
+    @if $show-home {
+        &#bg-img {
+            background: $bg-img;
+            background-attachment: fixed;
+            background-size: cover;
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba($primary-color, $bg-opacity);
+            z-index: -1;
+        }
+    }
+}
+
+@mixin sizeSm {
+    @media screen and (max-width: 500px) {
+        @content;
+    }
+}
+
+@mixin sizeMd {
+    @media screen and (max-width: 768px) {
+        @content;
+    }
+}
+
+@mixin sizeLg {
+    @media screen and (min-width: 769px) and 
+    (max-width: 1170px) {
+        @content;
+    }
+}
+
+@mixin sizeXl {
+    @media screen and (min-width: 1171px) {
+        @content;
+    }
+}
