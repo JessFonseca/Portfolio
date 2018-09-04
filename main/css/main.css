@@ -119,7 +119,6 @@ h1.lg-heading {
   font-size: 4rem; }
 
 h2.sm-heading {
-  width: fit-content;
   margin-bottom: 1rem;
   padding: .4rem 1rem;
   background: rgba(38, 39, 138, 0.3); }
@@ -154,8 +153,7 @@ main {
 .about-info {
   display: grid;
   grid-gap: 30px;
-  grid-template-areas: 'bioimage bio bio'
- 'job1 job2 job3';
+  grid-template-areas: 'bioimage bio bio' 'job1 job2 job3';
   grid-template-columns: 1fr 1fr 1fr; }
 
 .bio-img {
@@ -277,11 +275,7 @@ main {
     grid-template-columns: 1fr 1fr; }
   .about-info {
     display: grid;
-    grid-template-areas: 'bioimage'
- 'bio'
- 'job1'
- 'job2'
- 'job3';
+    grid-template-areas: 'bioimage' 'bio' 'job1' 'job2' 'job3';
     grid-template-columns: 1fr; }
   .bio-img {
     margin: auto; }
