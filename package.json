@@ -5,7 +5,7 @@
   "main": "index.js",
   "homepage": "https://jessfonseca.github.io/portfolio",
   "scripts": {
-    "sass": "node-sass -w scss/ -o css/ --recursive",
+    "sass": "node-sass -w scss/ -o main/css/ --recursive",
     "deploy": "gh-pages -d main"
   },
   "author": "Jesse Fonseca",
