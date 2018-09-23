@@ -1,191 +1,195 @@
-@import 'config';
-@import 'menu';
+@import "config";
+@import "menu";
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 body {
-    @include bg();
-    color: white;
-    background-color: $primary-color;
-    height: 100%;
-    margin:0;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    line-height: 1.5;
+  @include bg();
+  color: white;
+  background-color: $primary-color;
+  height: 100%;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  line-height: 1.5;
 }
 
 /* Heading */
 
-h1, h2, h3 {
-    margin: 0;
+h1,
+h2,
+h3 {
+  margin: 0;
 }
 
+.item {
+  p {
+    text-align: center;
+    margin: 5px;
+  }
+}
 h1.lg-heading {
-    font-size: 4rem;
+  font-size: 4rem;
 }
 
 h2.sm-heading {
-    margin-bottom: 1rem;
-    padding: .4rem 1rem;
-    background: rgba(lighten(#242582, 2), .3);
+  margin-bottom: 1rem;
+  padding: 0.4rem 1rem;
+  background: rgba(lighten(#242582, 2), 0.3);
 }
 
 a {
-    color: white;
-    text-decoration: none;
+  color: white;
+  text-decoration: none;
 }
 
 header {
-    position: fixed;
-    width: 100%;
-    z-index: 2;
+  position: fixed;
+  width: 100%;
+  z-index: 2;
 }
 
 .secondary-text {
-    color: $secondary-color;
+  color: $secondary-color;
 }
 
 main {
-    padding: 2rem;
-    height: 100%;
+  padding: 2rem;
+  height: 100%;
 
-    .icons {
-        margin-top: 1rem;
+  .icons {
+    margin-top: 1rem;
 
     a {
-        padding: 0.4rem;
+      padding: 0.4rem;
 
-        &:hover {
-            color: $secondary-color;
+      &:hover {
+        color: $secondary-color;
         @include fade();
-        }
+      }
     }
+  }
 
-
-    }
-
-    &#home {
-        overflow: hidden;
+  &#home {
+    overflow: hidden;
 
     h1 {
-        margin-top: 30vh;
+      margin-top: 30vh;
     }
-    }
+  }
 }
 
 //About Styling
 .about-info {
-    display: grid;
-    grid-gap: 30px;
-    grid-template-areas: 
-    'bioimage bio bio'
-    'job1 job3 job2';
-    grid-template-columns: 1fr 1fr 1fr;
+  display: grid;
+  grid-gap: 30px;
+  grid-template-areas:
+    "bioimage bio bio"
+    "job1 job3 job2";
+  grid-template-columns: 1fr 1fr 1fr;
 }
 
 .bio-img {
-     width:250px;
-     height: 300px;
-     border-radius: 50%;
-     grid-area: bioimage;
+  width: 250px;
+  height: 300px;
+  border-radius: 50%;
+  grid-area: bioimage;
 }
 
 .bio {
-    grid-area: bio;
-    font-size: 1.5rem;
+  grid-area: bio;
+  font-size: 1.5rem;
 }
 
 .job-1 {
-    grid-area: job1;
+  grid-area: job1;
 }
 
 .job-2 {
-    grid-area: job2;
+  grid-area: job2;
 }
 
 .job-3 {
-    grid-area: job3;
+  grid-area: job3;
 }
 
 .job {
-    background: lighten($primary-color, 5);
-    padding: 1rem;
-    border-bottom: $secondary-color 10px solid;
+  background: lighten($primary-color, 5);
+  padding: 1rem;
+  border-bottom: $secondary-color 10px solid;
 
-    ul {
-        padding: 0;
-    }
+  ul {
+    padding: 0;
+  }
 
-    li {
-        list-style: none;
-        margin-bottom: 1rem;
-        text-indent: 1.5rem;
-    }
+  li {
+    list-style: none;
+    margin-bottom: 1rem;
+    text-indent: 1.5rem;
+  }
 }
 
 //Work Styling
 .projects {
-    display: grid;
-    grid-gap: 25px;
-    grid-template-columns: 1fr 1fr 1fr;
-    img {
-        width: 100%;
-        height: auto;
-        border: white solid 4px;
-        &:hover {
-            opacity: .5;
-            border: $secondary-color solid 4px;
-            @include fade();
-        } 
+  display: grid;
+  grid-gap: 25px;
+  grid-template-columns: 1fr 1fr 1fr;
+  img {
+    width: 100%;
+    height: auto;
+    border: white solid 4px;
+    &:hover {
+      opacity: 0.5;
+      border: $secondary-color solid 4px;
+      @include fade();
     }
+  }
 }
 
 .btn-light {
-    margin-top: 10px;
-    display: block;
-    background: lighten($primary-color, 20);
+  margin-top: 10px;
+  display: block;
+  background: lighten($primary-color, 20);
 
-    &:hover {
-        background: $secondary-color;
-        @include fade();
-    }
+  &:hover {
+    background: $secondary-color;
+    @include fade();
+  }
 }
 
 .btn-dark {
-    position: static;
-    display: block;
-    background: darken($primary-color, 10);
-    
-    &:hover {
-        background: $secondary-color;
-        @include fade();
-    }
+  position: static;
+  display: block;
+  background: darken($primary-color, 10);
+
+  &:hover {
+    background: $secondary-color;
+    @include fade();
+  }
 }
 
 .boxes {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    align-items: center;
-    margin-top: auto;
-    
-    div {
-        font-size: 1.5rem;
-        border: white 3px solid;
-        margin-bottom: 3rem;
-        padding: 1.5rem 2.5rem;
-        @include fade();
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: auto;
 
-        &:hover {
-            padding: 1rem 1.5rem;
-            background: $secondary-color;
+  div {
+    font-size: 1.5rem;
+    border: white 3px solid;
+    margin-bottom: 3rem;
+    padding: 1.5rem 2.5rem;
+    @include fade();
 
-            span {
-                color: white;
-            }
-        }
+    &:hover {
+      padding: 1rem 1.5rem;
+      background: $secondary-color;
+
+      span {
+        color: white;
+      }
     }
-
+  }
 }
-@import 'mobile';
-
-
+@import "mobile";
