@@ -12,6 +12,7 @@
   "license": "ISC",
   "dependencies": {
     "gh-pages": "^1.2.0",
-    "node-sass": "^4.9.3"
+    "node-sass": "^4.9.3",
+    "puppeteer": "git+https://github.com/GoogleChrome/puppeteer.git"
   }
 }
