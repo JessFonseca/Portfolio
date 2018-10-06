@@ -1,0 +1,228 @@
+body {
+  background: #d3d3d3;
+  font-family: sans-serif;
+  /* overflow: hidden; */
+  box-sizing: border-box;
+}
+h1 {
+  text-align: center;
+}
+
+h2 {
+  margin: 10px;
+}
+
+.hide {
+  display: none;
+}
+
+form {
+  text-align: center;
+  vertical-align: middle;
+  margin: 30px;
+}
+
+/* header {
+    height: 480px;
+    background: blue;
+  } */
+input {
+  border-radius: 20px;
+  border: solid 1px #888;
+  outline: none;
+  padding-left: 10px;
+  margin: 0 5px;
+}
+
+input.edit-card-title {
+  font-size: 2rem;
+}
+
+textarea {
+  font-size: 2rem;
+  max-height: 400px;
+  height: 200px;
+  width: 100%;
+  border-radius: 20px;
+  border: solid 1px #888;
+  outline: none;
+  padding-left: 10px;
+  padding-top: 10px;
+}
+
+textarea:action {
+  border: none;
+}
+
+.error-message {
+  text-align: center;
+  background: pink;
+  color: red;
+  padding: 5px 0;
+}
+
+.card-area {
+  display: grid;
+  grid-gap: 30px;
+  grid-template-columns: 1fr 1fr 1fr;
+  /* grid-template-rows: auto; */
+  margin: 30px;
+}
+
+.highlighted-card-area {
+  /* display: block; */
+  margin: 30px;
+  /* transition: all 1s; */
+  /* width: 80%; */
+}
+
+.highlighted-card-area .card-info-expanded,
+.highlighted-card-area .card-title,
+.highlighted-card-area .card-name {
+  font-size: 2rem;
+}
+
+.highlighted-card-area .card-name {
+  display: block;
+  text-align: center;
+  margin-bottom: 50px;
+  font-size: 3rem;
+}
+
+.highlighted-card-area .card-title {
+  display: none;
+}
+
+.react-card {
+  position: relative;
+  background: rgb(255, 255, 255);
+  padding: 0 10px;
+  border: solid 1px #000;
+  /* transition: all 0.3s ease; */
+  /* overflow: hidden; */
+  /* transition: all 1s; */
+}
+
+.card-container {
+  overflow: hidden;
+  position: relative;
+  transition: all 0.5s;
+  margin: 30px;
+}
+
+.card-container:hover {
+  box-shadow: #333 3px 3px 10px;
+}
+
+.card-title {
+  margin-top: 10px;
+  font-size: 1.2rem;
+}
+
+.edit-card-title {
+  border: none;
+  background: transparent;
+  text-align: center;
+}
+
+.card-name {
+  font-size: 1.2rem;
+}
+
+.card-info {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  /* transition: all 1s; */
+  font-size: 1.5rem;
+}
+
+.edit-card-info {
+  border: none;
+  background: transparent;
+}
+
+.card-info-expanded {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: normal;
+}
+.card-line {
+  height: 1px;
+  border: 0;
+  background: #333;
+  background-image: linear-gradient(to right, #ccc, #333, #ccc);
+}
+
+.card-date {
+  bottom: 10px;
+  font-size: 0.8rem;
+  color: #999;
+}
+
+.react-card-expanded {
+  position: relative;
+  background: rgb(255, 255, 255);
+  padding: 0 10px;
+  border: solid 1px #000;
+  transition: all 0.3s ease;
+  overflow: hidden;
+  word-wrap: normal;
+  /* width: 50%; */
+}
+
+h2 {
+  display: inline-block;
+}
+.btn-center {
+  text-align: center;
+  border-radius: 20px;
+  margin-top: 100px;
+}
+
+.btn {
+  font-size: 2rem;
+  border-radius: 10px;
+  background: #aaa;
+  border: solid black 1px;
+  padding: 5px;
+  outline: none;
+  cursor: pointer;
+}
+
+.btn:focus {
+  background: black;
+  color: white;
+}
+
+.btn:hover {
+  background: black;
+  color: white;
+}
+button {
+  margin: 10px;
+}
+
+.btn-del {
+  height: 20px;
+  width: 20px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 10px;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-edit {
+  /* display: none; */
+  font-size: 1.1rem;
+  position: absolute;
+  margin: 10px;
+  top: 0;
+  right: 30px;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+}
